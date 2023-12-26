@@ -62,7 +62,7 @@ dependencies {
     // AboutPage
     implementation 'io.github.medyo:android-about-page:2.0.0'
     implementation 'de.psdev.licensesdialog:licensesdialog:2.2.0'
-    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
     implementation 'moe.feng:AlipayZeroSdk:1.1'
 
     implementation 'org.jdeferred:jdeferred-android-aar:1.2.6'
