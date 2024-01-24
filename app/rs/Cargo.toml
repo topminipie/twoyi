@@ -11,7 +11,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 
-libc = "0.2.112"
+libc = "0.2.152"
 
 once_cell = "1.18.0"
 
