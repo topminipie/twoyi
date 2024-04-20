@@ -4,7 +4,7 @@ plugins {
 
 android {
     defaultConfig {
-        applicationId 'io.twoyi' // app.vmdroid
+        applicationId 'io.twoyi'
         compileSdk 34
         minSdkVersion 27
         //noinspection ExpiredTargetSdkVersion
@@ -21,7 +21,6 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -41,7 +40,7 @@ android {
         buildConfig = true
     }
     
-    namespace 'io.twoyi' // app.vmdroid
+    namespace 'io.twoyi'
 }
 
 dependencies {
