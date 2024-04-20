@@ -20,6 +20,7 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Objects;
 
 import io.twoyi.R;
 import io.twoyi.utils.RomManager;
@@ -60,7 +61,7 @@ public class TwoyiDocumentsProvider extends DocumentsProvider {
         File BASE_DIR = RomManager.getRomSdcardDir(getContext());
 
         final MatrixCursor result = new MatrixCursor(projection != null ? projection : DEFAULT_ROOT_PROJECTION);
-        final String applicationName = getContext().getString(R.string.app_name);
+        final String applicationName = Objects.requireNonNull(getContext()).getString(R.string.app_name);
 
         final MatrixCursor.RowBuilder row = result.newRow();
         row.add(Root.COLUMN_ROOT_ID, DEFAULT_ROOT_ID);
@@ -182,7 +183,7 @@ public class TwoyiDocumentsProvider extends DocumentsProvider {
     }
 
     private String getRootSummary() {
-        return getContext().getResources().getString(R.string.sdcard_of_twoyi);
+        return Objects.requireNonNull(getContext()).getResources().getString(R.string.sdcard_of_twoyi);
     }
 
     private void includeFile(MatrixCursor result, String docId, File file)

@@ -12,7 +12,6 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -24,7 +23,6 @@ import android.os.SystemClock;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.webkit.WebView;
-import android.widget.Toast;
 
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
@@ -74,28 +72,6 @@ public class UIHelper {
         }
     }
 
-    public static void openWeiXin(Context context, String weixin) {
-        try {
-            // 获取剪贴板管理服务
-            ClipboardManager cm = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-            if (cm == null) {
-                return;
-            }
-            cm.setText(weixin);
-
-            Intent intent = new Intent(Intent.ACTION_MAIN);
-            ComponentName cmp = new ComponentName("com.tencent.mm", "com.tencent.mm.ui.LauncherUI");
-            intent.addCategory(Intent.CATEGORY_LAUNCHER);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.setComponent(cmp);
-
-            context.startActivity(intent);
-            Toast.makeText(context, R.string.wechat_public_account_tips, Toast.LENGTH_LONG).show();
-        } catch (Throwable e) {
-            Toast.makeText(context, "WeChat is not installed.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
     public static void show(Dialog dialog) {
         if (dialog == null) {
             return;
@@ -139,39 +115,6 @@ public class UIHelper {
                 .iconRes(R.mipmap.ic_launcher)
                 .progress(false, 0, true)
                 .build();
-    }
-
-    public static void showPrivacy(Context context) {
-        try {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            if (!(context instanceof AppCompatActivity)) {
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            }
-            intent.setData(Uri.parse("https://twoyi.app/privacy"));
-            context.startActivity(intent);
-        } catch (Throwable ignored) {
-        }
-    }
-
-    public static void showFAQ(Context context) {
-        try {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            if (!(context instanceof AppCompatActivity)) {
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            }
-            intent.setData(Uri.parse("https://twoyi.app/guide"));
-            context.startActivity(intent);
-        } catch (Throwable ignored) {
-            ignored.printStackTrace();
-        }
-    }
-
-    public static void goWebsite(Context context) {
-        visitSite(context, "https://twoyi.app");
-    }
-
-    public static void goTelegram(Context context) {
-        visitSite(context, "https://t.me/twoyi");
     }
 
     public static void visitSite(Context context, String url) {

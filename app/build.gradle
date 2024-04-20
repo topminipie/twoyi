@@ -54,8 +54,8 @@ dependencies {
     implementation "com.github.topjohnwu.libsu:core:5.2.2"
 
     // AboutPage
-    implementation 'io.github.medyo:android-about-page:2.0.0'
-    implementation 'de.psdev.licensesdialog:licensesdialog:2.2.0'
+    //implementation 'io.github.medyo:android-about-page:2.0.0'
+    //implementation 'de.psdev.licensesdialog:licensesdialog:2.2.0'
     implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
     implementation 'org.jdeferred:jdeferred-android-aar:1.2.6'
@@ -69,5 +69,5 @@ dependencies {
     implementation 'org.tukaani:xz:1.9'
 
     implementation 'com.github.hzy3774:AndroidP7zip:1.7.2'
-    implementation 'com.cleveroad:androidmanimation:0.9.1'
+    //implementation 'com.cleveroad:androidmanimation:0.9.1'
 }

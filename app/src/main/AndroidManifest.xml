@@ -37,11 +37,6 @@
 
 
         <activity
-            android:name=".ui.AboutActivity"
-            android:label="@string/about_btn"
-            android:screenOrientation="portrait" />
-
-        <activity
             android:name=".ui.SelectAppActivity"
             android:label="@string/create_app_activity"
             android:screenOrientation="portrait" />

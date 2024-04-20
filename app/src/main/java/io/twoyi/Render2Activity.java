@@ -37,8 +37,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.cleveroad.androidmanimation.LoadingAnimationView;
-
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -57,7 +55,6 @@ public class Render2Activity extends AppCompatActivity implements View.OnTouchLi
     private SurfaceView mSurfaceView;
 
     private ViewGroup mRootView;
-    private LoadingAnimationView mLoadingView;
     private TextView mLoadingText;
     private View mLoadingLayout;
     private View mBootLogView;
@@ -121,12 +118,10 @@ public class Render2Activity extends AppCompatActivity implements View.OnTouchLi
         mSurfaceView.getHolder().addCallback(mSurfaceCallback);
 
         mLoadingLayout = findViewById(R.id.loadingLayout);
-        mLoadingView = findViewById(R.id.loading);
         mLoadingText = findViewById(R.id.loadingText);
         mBootLogView = findViewById(R.id.bootlog);
 
         mLoadingLayout.setVisibility(View.VISIBLE);
-        mLoadingView.startAnimation();
 
         UITips.checkForAndroid12(this, this::bootSystem);
 
@@ -222,7 +217,6 @@ public class Render2Activity extends AppCompatActivity implements View.OnTouchLi
             }
 
             runOnUiThread(() -> {
-                mLoadingView.stopAnimation();
                 mLoadingLayout.setVisibility(View.GONE);
             });
         }, "waiting-boot").start();

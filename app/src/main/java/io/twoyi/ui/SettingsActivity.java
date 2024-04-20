@@ -98,8 +98,6 @@ public class SettingsActivity extends AppCompatActivity {
             Preference replaceRom = findPreference(R.string.settings_key_replace_rom);
             Preference factoryReset = findPreference(R.string.settings_key_factory_reset);
 
-            Preference about = findPreference(R.string.settings_key_about);
-
             importApp.setOnPreferenceClickListener(preference -> {
                 UIHelper.startActivity(getContext(), SelectAppActivity.class);
                 return true;
@@ -155,11 +153,6 @@ public class SettingsActivity extends AppCompatActivity {
                         })
                         .setNegativeButton(android.R.string.cancel, (dialog, which) -> dialog.dismiss())
                         .show();
-                return true;
-            });
-
-            about.setOnPreferenceClickListener(preference -> {
-                UIHelper.startActivity(getContext(), AboutActivity.class);
                 return true;
             });
         }

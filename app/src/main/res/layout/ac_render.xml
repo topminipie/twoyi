@@ -26,18 +26,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <com.cleveroad.androidmanimation.LoadingAnimationView
-            android:id="@+id/loading"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp"
-            app:lav_backgroundColor="@android:color/transparent"
-            app:lav_firstColor="@color/lav_google_red"
-            app:lav_fourthColor="@color/lav_google_yellow"
-            app:lav_secondColor="@color/lav_google_green"
-            app:lav_speedCoefficient="1.0"
-            app:lav_thirdColor="@color/lav_google_blue" />
-
         <TextView
             android:id="@+id/loadingText"
             android:layout_width="wrap_content"
