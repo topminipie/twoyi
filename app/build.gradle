@@ -65,7 +65,7 @@ dependencies {
     annotationProcessor 'androidx.annotation:annotation:1.7.1'
 
     implementation 'org.apache.commons:commons-compress:1.26.1'
-    implementation 'org.tukaani:xz:1.9'
+    //implementation 'org.tukaani:xz:1.9'
 
     implementation 'com.github.hzy3774:AndroidP7zip:1.7.2'
     //implementation 'com.cleveroad:androidmanimation:0.9.1'
