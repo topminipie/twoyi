@@ -44,29 +44,18 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
-
-    implementation 'com.github.tiann:FreeReflection:3.2.0'
-
-    implementation "com.github.topjohnwu.libsu:core:5.2.2"
-
-    // AboutPage
-    //implementation 'io.github.medyo:android-about-page:2.0.0'
-    //implementation 'de.psdev.licensesdialog:licensesdialog:2.2.0'
-    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
-
-    implementation 'org.jdeferred:jdeferred-android-aar:1.2.6'
     implementation 'com.github.clans:fab:1.6.4'
-
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
     implementation 'com.github.bumptech.glide:glide:5.0.0-rc01'
     annotationProcessor 'com.github.bumptech.glide:compiler:5.0.0-rc01'
-    annotationProcessor 'androidx.annotation:annotation:1.7.1'
 
     implementation 'org.apache.commons:commons-compress:1.26.1'
-    //implementation 'org.tukaani:xz:1.9'
-
     implementation 'com.github.hzy3774:AndroidP7zip:1.7.2'
-    //implementation 'com.cleveroad:androidmanimation:0.9.1'
+
+    implementation 'com.github.tiann:FreeReflection:3.2.0'
+    implementation "com.github.topjohnwu.libsu:core:5.2.2"
+    implementation 'org.jdeferred:jdeferred-android-aar:1.2.6'
+    annotationProcessor 'androidx.annotation:annotation:1.7.1'
 }
