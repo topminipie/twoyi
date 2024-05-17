@@ -21,7 +21,7 @@ android_logger = "0.13.3"
 
 ndk = "0.6.0"
 ndk-sys = "0.3.0"
-jni = { version = "0.19.0", default-features = false }
+jni = { version = "0.21.1", default-features = false }
 
 # for input system
 uinput-sys = "0.1.7"
