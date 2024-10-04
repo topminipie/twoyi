@@ -29,3 +29,11 @@ unix_socket = "0.5.0"
 
 [patch.crates-io]
 uinput-sys = { git = 'https://github.com/topminipie/rust-uinput-sys' }
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = "symbols"
+debug = false
+panic = "abort"
