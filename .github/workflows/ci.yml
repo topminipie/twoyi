@@ -35,7 +35,8 @@ jobs:
       - name: Install NDK
         uses: nttld/setup-ndk@v1
         with:
-          ndk-version: r26d
+          ndk-version: r28-rc1
+          link-to-sdk: true
           local-cache: true
 
       - name: Install Rust
