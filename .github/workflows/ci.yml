@@ -35,7 +35,7 @@ jobs:
       - name: Install NDK
         uses: nttld/setup-ndk@v1
         with:
-          ndk-version: r28-rc1
+          ndk-version: r28-beta2
           link-to-sdk: true
           local-cache: true
 
