@@ -64,11 +64,11 @@ jobs:
           cargo fmt --all -- --check
 
       - name: Build app
-        run: ./gradlew assembleDebug --no-daemon --warning-mode all
+        run: ./gradlew assembleRelease --no-daemon
 
       - name: Upload Apk
         if: github.repository == 'topminipie/twoyi'
         uses: actions/upload-artifact@v4
         with:
           name: apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/app-release.apk
