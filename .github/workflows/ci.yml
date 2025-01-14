@@ -56,19 +56,10 @@ jobs:
         run: |
           cd ./app/rs
           cargo ndk -t arm64-v8a -o ../src/main/jniLibs build --release
-          
-      - name: Check code formatting
-        continue-on-error: true
-        run: |
-          cd ./app/rs
-          cargo fmt --all -- --check
 
       - name: Build app
         run: |
           ./gradlew assembleRelease --no-daemon
-          echo "-------------------- R8 --------------------"
-          cat /home/runner/work/twoyi/twoyi/app/build/outputs/mapping/release/missing_rules.txt
-          echo "-------------------- R8 --------------------"
 
       - name: Upload Apk
         if: github.repository == 'topminipie/twoyi'
