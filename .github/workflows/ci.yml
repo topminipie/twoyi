@@ -64,7 +64,11 @@ jobs:
           cargo fmt --all -- --check
 
       - name: Build app
-        run: ./gradlew assembleRelease --no-daemon
+        run: |
+          ./gradlew assembleRelease --no-daemon
+          echo "-------------------- R8 --------------------"
+          cat /home/runner/work/twoyi/twoyi/app/build/outputs/mapping/release/missing_rules.txt
+          echo "-------------------- R8 --------------------"
 
       - name: Upload Apk
         if: github.repository == 'topminipie/twoyi'
