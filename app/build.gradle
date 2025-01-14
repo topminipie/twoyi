@@ -6,9 +6,9 @@ android {
     defaultConfig {
         applicationId 'io.twoyi'
         compileSdk 34
-        minSdkVersion 27
+        minSdk 27
         //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 27
+        targetSdk 27
         versionCode 1
         versionName "0.1"
 
@@ -20,7 +20,7 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
