@@ -28,7 +28,7 @@ jobs:
           echo '6ddd7424eb897310ee5858f2e392750ec5ad1f5bbef1e30c7d3493142cbf4ff1  rootfs.7z' | sha256sum -c
 
       - name: Install JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: 17
           distribution: temurin
