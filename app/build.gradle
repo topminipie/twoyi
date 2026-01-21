@@ -66,5 +66,5 @@ dependencies {
     implementation 'com.github.tiann:FreeReflection:3.2.2'
     implementation "com.github.topjohnwu.libsu:core:5.2.2"
     implementation 'org.jdeferred:jdeferred-android-aar:1.2.6'
-    annotationProcessor 'androidx.annotation:annotation:1.8.2'
+    annotationProcessor 'androidx.annotation:annotation:1.9.1'
 }
